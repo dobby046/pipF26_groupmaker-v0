@@ -23,7 +23,8 @@ export default function App() {
       const res = await fetch('/api/groups/randomize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ group_size: 4 }),
+        body: JSON.stringify({ group_size: 8 }),
+   
       })
       if (!res.ok) throw new Error(`Backend responded ${res.status}`)
       const data = await res.json()
